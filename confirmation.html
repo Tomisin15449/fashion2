@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="assets/css/syle.css">
+</head>
+<body>
+
+<div class="confirm-container">
+  <h1>Order Confirmed!</h1>
+  <p id="orderDetails"></p>
+  <a href="index.html">Back to Shop</a>
+</div>
+
+<script>
+  const orderData = JSON.parse(localStorage.getItem('orderData'));
+  if(orderData) {
+    document.getElementById('orderDetails').innerHTML = `
+      Order Confirmed for <b>${orderData.name}</b><br>
+      Quantity: <b>${orderData.quantity}</b><br>
+      Shipping to: <b>${orderData.address}</b><br>
+      Confirmation sent to: <b>${orderData.email}</b>
+    `;
+    localStorage.removeItem('orderData');
+  } else {
+    document.getElementById('orderDetails'); p.innerText="Order Confirmed!";
+  }
+</script>
+
+</body>
+</html>

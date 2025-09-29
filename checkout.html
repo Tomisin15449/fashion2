@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="assets/css/syle.css"> 
+    </head>
+    <body>
+<div class="checkout-container">
+  <h2>Checkout</h2>
+  <form id="checkoutForm">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="address" placeholder="Shipping Address" required>
+    <input type="number" name="quantity" placeholder="Quantity" min="1" value="1" required> 
+    <a href="confirmation.html"> Proceed Confirmed</a>
+  <script src="https://www.paypal.com/sdk/js?client-id=AYJoyPJTBP2PxEyAkZoWeDOTGkRiSGFGg-2QsLWfaqOR4Z80clTlSNaZHboFgiE7SbJBhnLxxkvU3Pbh&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
+            data-sdk-integration-source="developer-studio" ></script>
+<script src="app.js"></script>
+        <div id="paypal-button-container"></div>
+        <p id="result-message"></p> 
+        </body>
+        </html>
