@@ -1,5 +1,12 @@
 /* style.css */
-
+.row {
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding: 20px;
+    background-color: yellow;
+}
 /* General body style */
 body {
   font-family: Arial, sans-serif;
@@ -71,3 +78,4 @@ a {
 a:hover {
   background-color: #cc7a00;
 }
+
